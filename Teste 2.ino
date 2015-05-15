@@ -18,7 +18,7 @@ void loop()
   if (Serial.available() > 0) 
   {
     Serial.println("ESCREVENDO");
-    Serial.println(Str_Envio[1]);
+//    Serial.println(Str_Envio[1]);
     Serial.println(digitalRead(22));
     Serial.read();
   }
