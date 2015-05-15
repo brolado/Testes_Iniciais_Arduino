@@ -9,5 +9,6 @@ void loop()
   if (Serial.available() > 0) 
   {
     Serial.println("OK");
+    Serial.read();
   }
 }
