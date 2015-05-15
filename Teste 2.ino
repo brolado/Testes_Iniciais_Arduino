@@ -4,16 +4,22 @@ void setup()
 {
   // start serial port at 9600 bps:
   Serial.begin(9600);
+  pinMode(22,INPUT);
 }
 
 int Var_Digital;
 int Var_Analogica;
+char Str_Envio[3] = {'A','A',1};
 
 void loop()
 {
+  delay(500);
+  Str_Envio[1] = digitalRead(22); 
   if (Serial.available() > 0) 
   {
-    Serial.println("OK");
+    Serial.println("ESCREVENDO");
+    Serial.println(Str_Envio[1]);
+    Serial.println(digitalRead(22));
     Serial.read();
   }
 }
