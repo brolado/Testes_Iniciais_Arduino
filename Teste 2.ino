@@ -17,9 +17,10 @@ void loop()
   Str_Envio[1] = digitalRead(22); 
   if (Serial.available() > 0) 
   {
-    Serial.println("ESCREVENDO");
-//    Serial.println(Str_Envio[1]);
-    Serial.println(digitalRead(22));
+    Serial.println("begin");
+    Var_Digital = digitalRead(22);
+    Serial.println(Var_Digital);
+    Serial.println("end");
     Serial.read();
   }
 }
